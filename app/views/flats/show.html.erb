@@ -1,0 +1,48 @@
+<%= render "layouts/header" %>
+<div class="map-banner">
+<img src="https://i.ibb.co/RpF7nMD/Captura-de-Pantalla-2022-11-23-a-la-s-18-41-23.png">
+</div>
+<main>
+<div>
+<div class="container title-c">
+<div class="card card-title width-md">
+  <div class="card-body">
+    <h1><%= @flat.name %></h1>
+    <h4 class="address-text"><%= @flat.address %></h4>
+  </div>
+</div>
+</div>
+<div class="container info-box">
+<div class="card card-title width-md">
+  <div class="card-body">
+    <h2>A bit more about this flat</h2>
+    <p><%= @flat.description %></p>
+    <p>Max guests: <%= @flat.number_of_guests %></p>
+    <h5>$<%= @flat.price_per_night %></h5>
+  </div>
+</div>
+</div>
+</div>
+<div>
+<div class="container side-box">
+<div class="card card-title width-md">
+  <div class="card-body">
+    <h4>Book this place!</h4>
+    <div class="input-group mb-2 mr-sm-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">From:</div>
+    </div>
+    <input type="date" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+  </div>
+  <div class="input-group mb-2 mr-sm-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">To:</div>
+    </div>
+    <input type="date" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+  </div>
+  </div>
+  <a href="" class="btn btn-primary m-2">Book!</a>
+</div>
+</div>
+</div>
+</main>

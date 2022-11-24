@@ -1,0 +1,26 @@
+<%= render "layouts/header" %>
+<div class="container m-5">
+  <h2>All our flats (<%= @flats.length %>)</h2>
+  <div class="d-flex flex-wrap">
+  <%@flats.each do |flat| %>
+  <a href="flats/<%= flat.id%>" style= "text-decoration: none; color: black">
+  <div class="card m-3" style="width: 18rem;">
+  <img class="card-img-top" src="https://m.media-amazon.com/images/I/61GnO+UavZL._SL1400_.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h4 class="card-text"><%= flat.name %></h4>
+    <p class="card-text"><%= flat.address %></p>
+    <p class="card-text">🧑‍🤝‍🧑 <%= flat.number_of_guests %></p>
+    <h5 class="card-text" style="text-align:right"><strong>$<%= flat.price_per_night %></strong></h5>
+    <div class="d-flex">
+    <a href="" class="btn btn-success" style="margin-right:5px">Edit</a>
+    <%= link_to "Delete",
+    flat_path(flat),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-danger"
+    %>
+    </div>
+  </div>
+</div>
+</a>
+<% end %>
+  </div>
+</div>
